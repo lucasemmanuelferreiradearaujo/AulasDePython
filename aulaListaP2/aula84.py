@@ -9,11 +9,14 @@ pesoMenor = []
 cont = 0
 
 while True:
+    aux2 = str(input('Nome: '))
     aux = int(input('Qual é o seu peso? '))
     cont+=1
     if aux >= 100:
+        pesoMaior.append(aux2)
         pesoMaior.append(aux)
-    else:70    
+    else:
+        pesoMenor.append(aux2)    
         pesoMenor.append(aux)
     op = str(input('Continuar? [S/N] '))
     if op in 'N':
