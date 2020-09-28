@@ -11,9 +11,16 @@ lista = []
 listamulher=[]
 idademedia = []
 
+print('-=-'*20)
+
 while True:
     dados['nome'] = str(input('Nome: '))
-    dados['sexo'] = str(input('Sexo: '))
+    while True:
+        dados['sexo'] = str(input('Sexo: '))
+        if dados['sexo'] in 'mMFf':
+            break
+        else:
+            print('Por favor digite: M ou F para o sexo.')
     dados['idade'] = int(input('Idade: '))
 
     lista.append(dados.copy())
@@ -33,17 +40,21 @@ for c in lista:
     if c['idade'] > media:
         idademedia.append(c.copy())
 
+print('-=-'*20)
+
 print(f'A) Total de pessoas cadastras {len(lista)}.\n')
 
-print(f'B) A média de idade do grupo é de {media:.2f}.\n')
+print(f'B) A média de idade do grupo é de {media:.2f} anos de idade.\n')
 
-print(f'C) O total de mulheres cadastradas foi de {len(listamulher)}.')
+print(f'C) O total de mulheres cadastradas foi {len(listamulher)}.')
 if len(listamulher) != 0:
     for v in listamulher:
-        print(f"{v['nome']} tem {v['idade']} anos de idade.")
+        print(f"{v['nome']} com {v['idade']} anos de idade.")
 
 print('')
 print(f'D) O total de pessoas com a idade acima da média foi {len(idademedia)}.')
 if len(idademedia) != 0:
     for v in idademedia:
         print(f"{v['nome']} com uma idade de {v['idade']}.")
+
+print('-=-'*20)

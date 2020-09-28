@@ -11,7 +11,7 @@ while True:
     print('')
     cadastro_dados['totalGols'] = 0
     for c in range(numero_de_jogos):
-        cadastro_dados[f'jogo{c}'] = aux = int(input(f'Quantos gols fez no jogo {c}: '))
+        cadastro_dados[f'jogo {c}'] = aux = int(input(f'Quantos gols fez no jogo {c}: '))
         cadastro_dados['totalGols'] += aux
     dados_jogadores.append(cadastro_dados.copy())
     cadastro_dados.clear()
