@@ -5,7 +5,7 @@ from random import randint
 numeros = []
 def sorteia(nu):
     for c in range(5):
-        nu.append(randint(1,100))
+        nu.append(randint(1,10))
     return nu
 
 def somaPar(numeros):
