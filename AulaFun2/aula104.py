@@ -5,3 +5,15 @@ Crie um programa que tenha a função leiaint(), que vai funcionar de forma seme
 
 Ex: n=leiaint('Digite um n')
 '''
+
+
+def leiaint(msg):
+    while True:
+        n = str(input(msg))
+        if n.isnumeric():
+            return n
+        else:
+            print('\033[0;31mErro! Digite um n° valido.\033[m')
+            
+
+print(f"Você acabou de digitar o n° {leiaint('Digite um n°: ')}")
