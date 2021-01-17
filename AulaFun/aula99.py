@@ -15,4 +15,4 @@ def maior(*num):
     else:
         print('Nenhum valor cadastrado.')
         
-maior(20,30,40)
+maior(20,30,40,5)
